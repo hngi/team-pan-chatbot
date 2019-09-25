@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.nav {
+    background-color: rgb(8, 7, 7);
+    overflow: hidden;
+    width: 100%;
+    padding: 25px 35px;
+}
+
+.nav a {
+    float: right;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    padding: 17px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: rgb(8, 8, 8);
+}
+
+.nav a:hover {
+    background: #1F2021;
+    color: #06C695;
+}
+
+.nav .panicon {
+    float: left;
+    padding: 17px 20px;
+}
+
+.nav .chatwithpan {
+    border: 2px solid #06C695;
+    box-sizing: border-box; 
+}
+
+.nav a.active {
+    background-color: #06C695;
+    color: white;
+}
+
+.container {
+    justify-content: center;
+    text-align: left;
+    padding-left: 2em;
+    padding-right: 2em;
+    align-items: center;
+    /* display: flex; */
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column .side {
+    width: 50%;
+}
+
+.column .middle {
+    width: 50%;
+}
+
+h1, h2 {
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.button {
+    padding: 1em 4em;
+    text-decoration: none;
+    color: #ffffff;
+    background: #06C695;
+    border-radius: 25px;
+    font-size: 10px solid;
+    border: none; 
+    display: block;
+    box-shadow: 2px 3px #dddbdb;
+}

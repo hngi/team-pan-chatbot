@@ -1,0 +1,119 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Roboto, sans-serif;
+}
+.container {
+	width: 100%;
+	height: 100%;
+	background: rgba(245, 244, 243, 0.52);
+	background-size: cover;
+	position: absolute;
+}
+.menu ul {
+	display: inline-flex;
+	padding: 30px;
+	background: #1f2021;
+	margin: 0;
+	position: fixed;
+	width: 100%;
+}
+.menu ul li{
+	list-style: none;
+	padding: 0 20px;
+	color: #f9f9f9;
+	cursor: pointer;
+}
+.logo {
+	padding: 5px;
+	margin-top: -7px;
+	margin-right: 400px;
+}
+.active {
+	color: #06c695 !important;
+}
+.chat-btn {
+	top: 20px;
+	right: 120px;
+	position: absolute;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid #06c695;
+}
+.chat-btn span {
+	display: block;
+	padding: 8px 22px;
+}
+.banner {
+	width: 80%;
+	height: 70%;
+	top: 25%;
+	left: 130px;
+	position: absolute;
+	display: inline-flex;
+}
+.app-text h1{
+	font-size: 43px;
+	width: 640px;
+	position: relative;
+	margin-left: 40px;
+}
+.app-text p{
+	width: 650px;
+	margin: 30px 0 30px 40px;
+	line-height: 25px;
+}
+.btn{
+	margin-left: 40px;
+	line-height: 25px;
+	text-decoration: none;
+	color: #fff;
+	background-color: #06c695;
+	display: inline-flex;
+}
+.btn span {
+	padding: 8px 22px;
+}
+.app-picture {
+	width: 50%;
+	float: right;
+}
+.app-picture img{
+	width: 100%;
+}
+.bottom-link {
+	right: -100px;
+	bottom: 20px;
+	position: absolute;
+	cursor: pointer;
+}
+.bottom-link img {
+	width: 50%;
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 900px) {
+	.menu ul {
+		display: inline-flex;
+		padding: 20px;
+		background: #1f2021;
+		margin: 0;
+		position: fixed;
+		width: 100%;
+	}
+	ul {
+		display: none;
+	}
+	.logo {
+		width: 100%; 
+	}
+	.banner {
+		width: 100%;
+		height: 70%;
+		top: 25%;
+		left: 0;
+		right: 5px;
+		position: absolute;
+		display: inline-flex;
+	}
+}

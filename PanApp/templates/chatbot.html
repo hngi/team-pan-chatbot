@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='chatbot_style.css') }}">
+   <link rel="shortcut icon" type="image/x-icon"
+            href="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png" />
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         </body>         
+
+   <title>Pan Chatbot</title>
+
+   <style>
+         body {
+            font-family: monospace;
+         }
+
+         h1 {
+            background-color: rgb(125, 243, 243);
+            display: inline-block;
+            font-size: 3em;
+            margin: 0;
+            padding: 14px;
+         }
+
+         #chatbox {
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            margin-top: 60px;
+         }
+
+         #userInput {
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            margin-top: 60px;
+         }
+
+         #textInput {
+            width: 90%;
+            border: none;
+            border-bottom: 3px solid black;
+            font-family: monospace;
+            font-size: 17px;
+         }
+
+         .userText {
+            color: white;
+            font-family: monospace;
+            font-size: 17px;
+            text-align: right;
+            line-height: 30px;
+         }
+
+         .userText span {
+            background-color: #808080;
+            padding: 5px;
+            border-radius: 2px;
+         }
+
+         .botText {
+            color: white;
+            font-family: monospace;
+            font-size: 16px;
+            text-align: left;
+            line-height: 30px;
+         }
+
+         .botText span {
+            background-color: #4169e1;
+            padding: 6px;
+            border-radius: 2px;
+         }
+
+         #tidbit {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+         }
+
+         .boxed {
+            margin-left: auto;
+            margin-right: auto;
+            width: 78%;
+            margin-top: 60px;
+            border: 2px solid green;
+            border-radius: 3px;
+         }
+
+         .box {
+            border: 2px solid black;
+         }
+      </style>
+
+</head>
+
+<body>
+   <!--nagivation bar container-->
+   <div class="nav">
+      <img class="panicon" src="https://res.cloudinary.com/adeleke-speed/image/upload/v1569406139/panicon_ba4m9j.png"
+         alt="pan chatbot logo">
+      <a class="chatwithpan" href="#chatwithpan">Chat with Pan</a>
+      <a class="termsofuse" href="#termsofuse">Terms of Use</a>
+      <a class="developers" href="#developers">Developers</a>
+      <a class="faqs" href="https://sites.google.com/hotels.ng/internship/faq-frequently-asked-questions">FAQS</a>
+      <a class="chatbot" href="#chatbot">Chatbot</a>
+      <a class="active" href="{{url_for('home')}}">Home</a>
+   </div>
+   <br><br><br><br>
+
+   <div class="container">
+      <!--HNG, intro text, Start Chat button container-->
+      <div class="column side">
+         <img src="https://res.cloudinary.com/adeleke-speed/image/upload/v1569406403/brandlogo_kfd7tw.png" width="75%" height="100%">
+         <br><br><br><br>
+         <!-- <h2>Talk to Pan, your HNG7 Mentor</h2> -->
+         <!-- <br><br>               -->
+
+
+            <center>
+               <h1>Talk to Pan,
+                  <img
+                     src="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
+                     alt="pan" style="width:45px;height:45px;" /> Your HNG7 Mentor
+               </h1>
+            </center>
+
+            <div class="box"></div>
+            <div class="boxed">
+               <div>
+                  <div id="chatbox">
+                     <img
+                        src="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
+                        alt="CANDICE" style="width:40px;height:40px;" />
+                     <p class="botText">
+                        <span>Hi! I'm Pan, your favorite chat bot ❤️</span>
+                     </p>
+                  </div>
+                  <div id="userInput">
+                     <input id="textInput" type="text" name="msg" placeholder="Message" />
+                  </div>
+               </div>
+               <script>
+                  
+               function getBotResponse() {
+                  var rawText = $("#textInput").val();
+                  var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                  $("#textInput").val("");
+                  $("#chatbox").append(userHtml);
+
+                  document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+
+                  $.get("/get", { msg: rawText }).done(function(data) {
+                     var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                     $("#chatbox").append(botHtml);
+
+                     document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+                  });
+               }
+               $("#textInput").keypress(function(e) {
+                  if (e.which == 13) {
+                     getBotResponse();
+                  }
+               });
+            </script>
+         </div>
+
+            <!-- <script src="{{ url_for('static', filename='chatbot.js') }}">
+            </script> -->
+            
+
+</html>

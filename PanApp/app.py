@@ -29,9 +29,10 @@ def get_bot_response():
    userInput = userText
 
    while True:
+      if userInput in /[a-z]/:
+         return "Welcome %s, How may I help you?" %userInput
 
-      # userInput = input(">>>Me: ")
-      if userInput in greetings:
+      elif userInput in greetings:
          random_greeting = random.choice(greetings)
          time.sleep(.5)
          return random_greeting

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Pan Chat</title>
+    <style>
+        nav.navbar {
+            background-color: #1F2021 !important;
+            font-weight: 300;
+        }
+
+        .navbar-nav > li > a.active {
+            color: #6FCF97 !important;
+        }
+
+        .navbar-nav > li > a {
+            color: #fff !important;
+        }
+
+        .right-side {
+            padding-top: 13vh;
+            padding-bottom: 16vh;
+        }
+
+        .btn-success {
+            background-color: #06C695;
+            border-color: #06C695;
+        }
+
+        .btn-success:hover {
+            background-color: #06C695;
+            border-color: #06C695;
+        }
+
+        .chat-screen {
+            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569406095/panchat/Untitled-1_v5g9ln.png');
+            background-position: center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-2">
+    <a class="navbar-brand" href="#">
+        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/Group_lv8bea.png"
+             alt="Logo" class="img-fluid">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarNavDropdown" class="navbar-collapse collapse">
+        <ul class="navbar-nav mr-auto">
+
+        </ul>
+        <ul class="navbar-nav mr-5">
+
+            <li class="nav-item mr-5">
+                <a class="nav-link active" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="https://www.termsfeed.com/terms-service/63c7e2d102f8f89a4dc18f44ce826b03">Terms
+                    of Use</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="col-md-12">
+    <div class="col-md-8 offset-md-2 chat-screen">
+        <ul class="list-group chat-log js-chat-log">
+        </ul>
+    </div>
+
+    <br><br>
+
+    <footer class="fixed-bottom" style="background-color: #fff">
+        <div class="col-md-8 offset-md-2">
+            <div class="input-group mb-1 mt-2">
+                <input type="text" class="form-control js-text" placeholder="Type your message...">
+                <span class="input-group-btn">
+                        <button class="btn btn-success js-say">Submit</button>
+                    </span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/js.cookie.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
+
+
+<script>
+    var chatterbotUrl = "{% url 'chatterbot' %}";
+    var csrftoken = Cookies.get('csrftoken');
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+    $.ajaxSetup({
+        beforeSend: function (xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+    var $chatlog = $('.js-chat-log');
+    var $input = $('.js-text');
+    var $sayButton = $(".js-say");
+
+    function createRow(text) {
+        var $row = $('<li class="list-group-item"></li>');
+
+        $row.text(text);
+        $chatlog.append($row);
+    }
+
+    function submitInput() {
+        var inputData = {
+            'text': $input.val()
+        }
+
+        // Display the user's input on the web page
+        createRow(inputData.text);
+
+        var $submit = $.ajax({
+            type: 'POST',
+            url: chatterbotUrl,
+            data: JSON.stringify(inputData),
+            contentType: 'application/json'
+        });
+
+        $submit.done(function (statement) {
+            createRow(statement.text);
+
+            // Clear the input field
+            $input.val('');
+
+            // Scroll to the bottom of the chat interface
+            $chatlog[0].scrollTop = $chatlog[0].scrollHeight;
+        });
+
+        $submit.fail(function () {
+            // TODO: Handle errors
+        });
+    }
+
+    $sayButton.click(function () {
+        submitInput();
+    });
+
+    $input.keydown(function (event) {
+        // Submit the input when the enter button is pressed
+        if (event.keyCode == 13) {
+            submitInput();
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,50 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <title>Pan Chat</title>
+    <meta charset="utf-8">
+    <title>BotUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../botui/build/botui.min.css" />
+    <link rel="stylesheet" href="../botui/build/botui-theme-default.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-        nav.navbar {
-            background-color: #1F2021 !important;
-            font-weight: 300;
+        html,
+        body {
+            background-color: #41c0cc;
+            background-image: linear-gradient(-90deg, #41c0cc, #41cca5);
         }
         
-        .navbar-nav>li>a.active {
-            color: #6FCF97 !important;
+        .botui-container {
+            background-color: inherit;
         }
         
-        .navbar-nav>li>a {
-            color: #fff !important;
+        .botui-actions-container {
+            padding: 0px 30px;
         }
         
-        .right-side {
-            padding-top: 13vh;
-            padding-bottom: 16vh;
+        .botui-message {}
+        
+        .botui-message-content.text {
+            background-color: #e1fafc;
+            color: #404040;
         }
         
-        .btn-success {
-            background-color: #06C695;
-            border-color: #06C695;
+        .botui-message-content.human {
+            background-color: #f7ff61;
+            color: #404040;
         }
         
-        .btn-success:hover {
-            background-color: #06C695;
-            border-color: #06C695;
-        }
-        
-        .chat-screen {
-            background-image: url('https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569406095/panchat/Untitled-1_v5g9ln.png');
-            background-position: center center;
-            background-size: cover;
+        button.botui-actions-buttons-button {
+            margin-top: 0px;
         }
     </style>
+
 </head>
 
 <body>
@@ -72,335 +67,618 @@
         </div>
     </nav>
 
-    <div class="col-md-12">
-
-        <div class="col-md-8 offset-md-2 chat-screen">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5 pl-2" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">Hello, my name is Pan. I’m your mentor and friend and ready to your questions. What is your name?
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">My name is NAME
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">Nice to meet you NAME. you can ask me any question about the internship. I’m here to help you.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">What is HNG
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">HNG internship is a 3 months remote internship designed to find and develop the most talented software developers.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">I am a newbie and have no experience, is the programme for me?
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">Yes the programme is for you. There is a pre-internship to prepare the newbies. If you are dedicated, you will be able to do well. To know more, click the link <a href="https://hng.tech/about">HNG</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">How do I join
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">Follow the link and join. its an easy process. <a href="https://hng.tech/become-intern">Join</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">Is the internship free?
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">The HNG internship is completely free. </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">Will the internship pay the interns or support me? </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">in the past, we have paid interns a monthly stipends, but because of the large number of interns we take in yearly, we do not pay the interns except in some circumstance.</p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">i don’t have a laptop will hng give me one (or any question the bot doesn’t understand)
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">i do not understand this question. please re-phrase it. The following are questions I can answer:
-                            <ul>
-                                <li>What is HNG</li>
-                                <li>How can I join</li>
-                                <li>What programmes can I do in the internship
-                                </li>
-                                <li>What do I need to join the internship</li>
-                                <li>Will I get a job after the internship</li>
-                            </ul>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">What do I need to get started
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">You will need the following to do this internship successfully: <br> a laptop <br> internet <br> time <br> electricity.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">What programmes will I learn or do in the internship
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">You will have the Opportunity to learn <br> Design <br> Frontend Development <br> Backend Development <br> Machine Learning <br> Digital Marketing <br> Android Development <br> Sale Engineering
-                            <br>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">Will I get a job from the internship
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">Yes, if you complete the internship successfully, there will be job oppurtunities. we will also prepare you for interviews and help you with how to build a work profile. take a look at our past interns https://hng.tech/interns
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">Thank you
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">You're welcome NAME
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/chat_button_ejbakd.png" alt="..." class="img-fluid float-right rounded" style="width: 50px;">
-                        <p class="pt-1 pb-3 ml-2 mr-5 pl-3" style="background-color:rgb(227, 254, 209); border-radius: 30px 0px 30px 30px;">Bye
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="clearfix">
-                        <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/images_tgrhxk.png" alt="..." class="img-fluid float-left rounded" style="width: 50px;">
-                        <p class="pt-3 pb-3 mt-2 ml-5" style="background-color:#fff; border-radius: 0px 30px 30px 30px;">
-                            Goodbye NAME, hope you check back soon.</p>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-4"></div>
-            </div>
-
-
-        </div>
-
-        <br><br>
-
-        <footer class="fixed-bottom" style="background-color: #fff">
-            <div class="col-md-8 offset-md-2">
-                <div class="input-group mb-1 mt-2">
-                    <input type="text" class="form-control" placeholder="Type your message...">
-                    <div class="input-group-append">
-                        <button class="btn btn-success" type="submit">Send</button>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    <div id="pan-bot-ui" class="col-md-8 offset-md-2">
+        <bot-ui></bot-ui>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="../botui/build/botui.min.js"></script>
+
+    <script>
+        var botui = new BotUI('pan-bot-ui');
+        botui.message.add({
+            delay: 1000,
+            loading: true,
+            content: 'Hello, My name is Pan. I will be your user friendly bot for today!'
+        }).then(function() {
+            botui.message.add({ // show a message
+                delay: 1000,
+                loading: true,
+                content: 'Whats your name?'
+            }).then(function() { // wait till its shown
+                return botui.action.text({ // show 'text' action
+                    action: {
+                        placeholder: 'Your name'
+                    }
+                });
+            }).then(function(res) { // get the result
+                botui.message.add({
+                    content: 'Hello ' + res.value + ', ' +
+                        'How can I help you today?'
+                });
+            }).then(function() {
+                return botui.action.button({
+                    delay: 1000,
+                    loading: true,
+                    action: [{
+                        text: 'What is HNG?',
+                        value: 'hng'
+                    }, {
+                        text: 'I am a newbie and have no experience, is the programme for me?',
+                        value: 'newbie'
+                    }, {
+                        text: 'How do I join HNG?',
+                        value: 'join'
+                    }, {
+                        text: 'Is the Internship free?',
+                        value: 'free'
+                    }, {
+                        text: 'Will the internship pay the interns or support me?',
+                        value: 'support'
+                    }, {
+                        text: 'What do I need to get started?',
+                        value: 'need'
+                    }, {
+                        text: 'What programmes will I learn or do in the internship?',
+                        value: 'programmes'
+                    }, {
+                        text: 'Will I get a job from the internship?',
+                        value: 'job'
+                    }]
+                });
+            }).then(function(res) {
+                var message;
+
+                if (res.value === "hng") {
+                    message =
+                        'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+                        'talented software developers.';
+                } else if (res.value == "newbie") {
+                    message =
+                        'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+                        ' If you are dedicated, you will be able to do well.' +
+                        ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+                } else if (res.value === "join") {
+                    message =
+                        'Follow the link and join. its an easy process. ' +
+                        '<a href="https://hng.tech/become-intern">Join</a>';
+                } else if (res.value === "free") {
+                    message =
+                        'Yes, The HNG internship is completely free.';
+                } else if (res.value === "support") {
+                    message =
+                        'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+                        'interns we take in yearly, we do not pay the interns except in some circumstance.';
+                } else if (res.value === "need") {
+                    message =
+                        'You will need the following to do this internship successfully:' +
+                        '<br> A Laptop <br>' +
+                        'Internet<br>Time<br>Electricity.';
+                } else if (res.value === "programmes") {
+                    message =
+                        'You will have the opportunity to learn ' +
+                        '<br> Design <br> Frontend Development <br>' +
+                        'Backend Development <br> Machine Learning' +
+                        '<br>Digital Marketing <br>Android Development' +
+                        '<br> Sale Engineering';
+                } else if (res.value === "job") {
+                    message =
+                        'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+                        'We will also prepare you for interviews and help you with how to build a work profile. ' +
+                        'Take a look at our past interns <br>' +
+                        '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+                }
+                return botui.message.add({
+                    type: 'html',
+                    delay: 1000,
+                    loading: true,
+                    content: message
+                });
+            }).then(function() {
+                return botui.action.button({
+                    delay: 1000,
+                    loading: true,
+                    action: [{
+                        text: 'What is HNG?',
+                        value: 'hng'
+                    }, {
+                        text: 'I am a newbie and have no experience, is the programme for me?',
+                        value: 'newbie'
+                    }, {
+                        text: 'How do I join HNG?',
+                        value: 'join'
+                    }, {
+                        text: 'Is the Internship free?',
+                        value: 'free'
+                    }, {
+                        text: 'Will the internship pay the interns or support me?',
+                        value: 'support'
+                    }, {
+                        text: 'What do I need to get started?',
+                        value: 'need'
+                    }, {
+                        text: 'What programmes will I learn or do in the internship?',
+                        value: 'programmes'
+                    }, {
+                        text: 'Will I get a job from the internship?',
+                        value: 'job'
+                    }]
+                });
+            }).then(function(res) {
+                var message;
+
+                if (res.value === "hng") {
+                    message =
+                        'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+                        'talented software developers.';
+                } else if (res.value == "newbie") {
+                    message =
+                        'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+                        ' If you are dedicated, you will be able to do well.' +
+                        ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+                } else if (res.value === "join") {
+                    message =
+                        'Follow the link and join. its an easy process. ' +
+                        '<a href="https://hng.tech/become-intern">Join</a>';
+                } else if (res.value === "free") {
+                    message =
+                        'Yes, The HNG internship is completely free.';
+                } else if (res.value === "support") {
+                    message =
+                        'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+                        'interns we take in yearly, we do not pay the interns except in some circumstance.';
+                } else if (res.value === "need") {
+                    message =
+                        'You will need the following to do this internship successfully:' +
+                        '<br> A Laptop <br>' +
+                        'Internet<br>Time<br>Electricity.';
+                } else if (res.value === "programmes") {
+                    message =
+                        'You will have the opportunity to learn ' +
+                        '<br> Design <br> Frontend Development <br>' +
+                        'Backend Development <br> Machine Learning' +
+                        '<br>Digital Marketing <br>Android Development' +
+                        '<br> Sale Engineering';
+                } else if (res.value === "job") {
+                    message =
+                        'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+                        'We will also prepare you for interviews and help you with how to build a work profile. ' +
+                        'Take a look at our past interns <br>' +
+                        '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+                }
+                return botui.message.add({
+                    type: 'html',
+                    delay: 1000,
+                    loading: true,
+                    content: message
+                });
+            }).then(function() {
+                return botui.action.button({
+                    delay: 1000,
+                    loading: true,
+                    action: [{
+                        text: 'What is HNG?',
+                        value: 'hng'
+                    }, {
+                        text: 'I am a newbie and have no experience, is the programme for me?',
+                        value: 'newbie'
+                    }, {
+                        text: 'How do I join HNG?',
+                        value: 'join'
+                    }, {
+                        text: 'Is the Internship free?',
+                        value: 'free'
+                    }, {
+                        text: 'Will the internship pay the interns or support me?',
+                        value: 'support'
+                    }, {
+                        text: 'What do I need to get started?',
+                        value: 'need'
+                    }, {
+                        text: 'What programmes will I learn or do in the internship?',
+                        value: 'programmes'
+                    }, {
+                        text: 'Will I get a job from the internship?',
+                        value: 'job'
+                    }]
+                });
+            }).then(function(res) {
+                var message;
+
+                if (res.value === "hng") {
+                    message =
+                        'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+                        'talented software developers.';
+                } else if (res.value == "newbie") {
+                    message =
+                        'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+                        ' If you are dedicated, you will be able to do well.' +
+                        ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+                } else if (res.value === "join") {
+                    message =
+                        'Follow the link and join. its an easy process. ' +
+                        '<a href="https://hng.tech/become-intern">Join</a>';
+                } else if (res.value === "free") {
+                    message =
+                        'Yes, The HNG internship is completely free.';
+                } else if (res.value === "support") {
+                    message =
+                        'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+                        'interns we take in yearly, we do not pay the interns except in some circumstance.';
+                } else if (res.value === "need") {
+                    message =
+                        'You will need the following to do this internship successfully:' +
+                        '<br> A Laptop <br>' +
+                        'Internet<br>Time<br>Electricity.';
+                } else if (res.value === "programmes") {
+                    message =
+                        'You will have the opportunity to learn ' +
+                        '<br> Design <br> Frontend Development <br>' +
+                        'Backend Development <br> Machine Learning' +
+                        '<br>Digital Marketing <br>Android Development' +
+                        '<br> Sale Engineering';
+                } else if (res.value === "job") {
+                    message =
+                        'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+                        'We will also prepare you for interviews and help you with how to build a work profile. ' +
+                        'Take a look at our past interns <br>' +
+                        '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+                }
+                return botui.message.add({
+                    type: 'html',
+                    delay: 1000,
+                    loading: true,
+                    content: message
+                });
+            }).then(function() {
+                return botui.action.button({
+                    delay: 1000,
+                    loading: true,
+                    action: [{
+                        text: 'What is HNG?',
+                        value: 'hng'
+                    }, {
+                        text: 'I am a newbie and have no experience, is the programme for me?',
+                        value: 'newbie'
+                    }, {
+                        text: 'How do I join HNG?',
+                        value: 'join'
+                    }, {
+                        text: 'Is the Internship free?',
+                        value: 'free'
+                    }, {
+                        text: 'Will the internship pay the interns or support me?',
+                        value: 'support'
+                    }, {
+                        text: 'What do I need to get started?',
+                        value: 'need'
+                    }, {
+                        text: 'What programmes will I learn or do in the internship?',
+                        value: 'programmes'
+                    }, {
+                        text: 'Will I get a job from the internship?',
+                        value: 'job'
+                    }]
+                });
+            }).then(function(res) {
+                var message;
+
+                if (res.value === "hng") {
+                    message =
+                        'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+                        'talented software developers.';
+                } else if (res.value == "newbie") {
+                    message =
+                        'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+                        ' If you are dedicated, you will be able to do well.' +
+                        ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+                } else if (res.value === "join") {
+                    message =
+                        'Follow the link and join. its an easy process. ' +
+                        '<a href="https://hng.tech/become-intern">Join</a>';
+                } else if (res.value === "free") {
+                    message =
+                        'Yes, The HNG internship is completely free.';
+                } else if (res.value === "support") {
+                    message =
+                        'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+                        'interns we take in yearly, we do not pay the interns except in some circumstance.';
+                } else if (res.value === "need") {
+                    message =
+                        'You will need the following to do this internship successfully:' +
+                        '<br> A Laptop <br>' +
+                        'Internet<br>Time<br>Electricity.';
+                } else if (res.value === "programmes") {
+                    message =
+                        'You will have the opportunity to learn ' +
+                        '<br> Design <br> Frontend Development <br>' +
+                        'Backend Development <br> Machine Learning' +
+                        '<br>Digital Marketing <br>Android Development' +
+                        '<br> Sale Engineering';
+                } else if (res.value === "job") {
+                    message =
+                        'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+                        'We will also prepare you for interviews and help you with how to build a work profile. ' +
+                        'Take a look at our past interns <br>' +
+                        '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+                }
+                return botui.message.add({
+                    type: 'html',
+                    delay: 1000,
+                    loading: true,
+                    content: message
+                });
+            }).then(function() {
+                return botui.action.button({
+                    delay: 1000,
+                    loading: true,
+                    action: [{
+                        text: 'What is HNG?',
+                        value: 'hng'
+                    }, {
+                        text: 'I am a newbie and have no experience, is the programme for me?',
+                        value: 'newbie'
+                    }, {
+                        text: 'How do I join HNG?',
+                        value: 'join'
+                    }, {
+                        text: 'Is the Internship free?',
+                        value: 'free'
+                    }, {
+                        text: 'Will the internship pay the interns or support me?',
+                        value: 'support'
+                    }, {
+                        text: 'What do I need to get started?',
+                        value: 'need'
+                    }, {
+                        text: 'What programmes will I learn or do in the internship?',
+                        value: 'programmes'
+                    }, {
+                        text: 'Will I get a job from the internship?',
+                        value: 'job'
+                    }]
+                });
+            }).then(function(res) {
+                var message;
+
+                if (res.value === "hng") {
+                    message =
+                        'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+                        'talented software developers.';
+                } else if (res.value == "newbie") {
+                    message =
+                        'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+                        ' If you are dedicated, you will be able to do well.' +
+                        ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+                } else if (res.value === "join") {
+                    message =
+                        'Follow the link and join. its an easy process. ' +
+                        '<a href="https://hng.tech/become-intern">Join</a>';
+                } else if (res.value === "free") {
+                    message =
+                        'Yes, The HNG internship is completely free.';
+                } else if (res.value === "support") {
+                    message =
+                        'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+                        'interns we take in yearly, we do not pay the interns except in some circumstance.';
+                } else if (res.value === "need") {
+                    message =
+                        'You will need the following to do this internship successfully:' +
+                        '<br> A Laptop <br>' +
+                        'Internet<br>Time<br>Electricity.';
+                } else if (res.value === "programmes") {
+                    message =
+                        'You will have the opportunity to learn ' +
+                        '<br> Design <br> Frontend Development <br>' +
+                        'Backend Development <br> Machine Learning' +
+                        '<br>Digital Marketing <br>Android Development' +
+                        '<br> Sale Engineering';
+                } else if (res.value === "job") {
+                    message =
+                        'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+                        'We will also prepare you for interviews and help you with how to build a work profile. ' +
+                        'Take a look at our past interns <br>' +
+                        '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+                }
+                return botui.message.add({
+                    type: 'html',
+                    delay: 1000,
+                    loading: true,
+                    content: message
+                });
+            }).then(function() {
+                return botui.action.button({
+                    delay: 1000,
+                    loading: true,
+                    action: [{
+                        text: 'What is HNG?',
+                        value: 'hng'
+                    }, {
+                        text: 'I am a newbie and have no experience, is the programme for me?',
+                        value: 'newbie'
+                    }, {
+                        text: 'How do I join HNG?',
+                        value: 'join'
+                    }, {
+                        text: 'Is the Internship free?',
+                        value: 'free'
+                    }, {
+                        text: 'Will the internship pay the interns or support me?',
+                        value: 'support'
+                    }, {
+                        text: 'What do I need to get started?',
+                        value: 'need'
+                    }, {
+                        text: 'What programmes will I learn or do in the internship?',
+                        value: 'programmes'
+                    }, {
+                        text: 'Will I get a job from the internship?',
+                        value: 'job'
+                    }]
+                });
+            }).then(function(res) {
+                var message;
+
+                if (res.value === "hng") {
+                    message =
+                        'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+                        'talented software developers.';
+                } else if (res.value == "newbie") {
+                    message =
+                        'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+                        ' If you are dedicated, you will be able to do well.' +
+                        ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+                } else if (res.value === "join") {
+                    message =
+                        'Follow the link and join. its an easy process. ' +
+                        '<a href="https://hng.tech/become-intern">Join</a>';
+                } else if (res.value === "free") {
+                    message =
+                        'Yes, The HNG internship is completely free.';
+                } else if (res.value === "support") {
+                    message =
+                        'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+                        'interns we take in yearly, we do not pay the interns except in some circumstance.';
+                } else if (res.value === "need") {
+                    message =
+                        'You will need the following to do this internship successfully:' +
+                        '<br> A Laptop <br>' +
+                        'Internet<br>Time<br>Electricity.';
+                } else if (res.value === "programmes") {
+                    message =
+                        'You will have the opportunity to learn ' +
+                        '<br> Design <br> Frontend Development <br>' +
+                        'Backend Development <br> Machine Learning' +
+                        '<br>Digital Marketing <br>Android Development' +
+                        '<br> Sale Engineering';
+                } else if (res.value === "job") {
+                    message =
+                        'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+                        'We will also prepare you for interviews and help you with how to build a work profile. ' +
+                        'Take a look at our past interns <br>' +
+                        '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+                }
+                return botui.message.add({
+                    type: 'html',
+                    delay: 1000,
+                    loading: true,
+                    content: message
+                });
+            }).then(function() {
+                return botui.action.button({
+                    delay: 1000,
+                    loading: true,
+                    action: [{
+                        text: 'What is HNG?',
+                        value: 'hng'
+                    }, {
+                        text: 'I am a newbie and have no experience, is the programme for me?',
+                        value: 'newbie'
+                    }, {
+                        text: 'How do I join HNG?',
+                        value: 'join'
+                    }, {
+                        text: 'Is the Internship free?',
+                        value: 'free'
+                    }, {
+                        text: 'Will the internship pay the interns or support me?',
+                        value: 'support'
+                    }, {
+                        text: 'What do I need to get started?',
+                        value: 'need'
+                    }, {
+                        text: 'What programmes will I learn or do in the internship?',
+                        value: 'programmes'
+                    }, {
+                        text: 'Will I get a job from the internship?',
+                        value: 'job'
+                    }]
+                });
+            }).then(function(res) {
+                var message;
+
+                if (res.value === "hng") {
+                    message =
+                        'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+                        'talented software developers.';
+                } else if (res.value == "newbie") {
+                    message =
+                        'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+                        ' If you are dedicated, you will be able to do well.' +
+                        ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+                } else if (res.value === "join") {
+                    message =
+                        'Follow the link and join. its an easy process. ' +
+                        '<a href="https://hng.tech/become-intern">Join</a>';
+                } else if (res.value === "free") {
+                    message =
+                        'Yes, The HNG internship is completely free.';
+                } else if (res.value === "support") {
+                    message =
+                        'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+                        'interns we take in yearly, we do not pay the interns except in some circumstance.';
+                } else if (res.value === "need") {
+                    message =
+                        'You will need the following to do this internship successfully:' +
+                        '<br> A Laptop <br>' +
+                        'Internet<br>Time<br>Electricity.';
+                } else if (res.value === "programmes") {
+                    message =
+                        'You will have the opportunity to learn ' +
+                        '<br> Design <br> Frontend Development <br>' +
+                        'Backend Development <br> Machine Learning' +
+                        '<br>Digital Marketing <br>Android Development' +
+                        '<br> Sale Engineering';
+                } else if (res.value === "job") {
+                    message =
+                        'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+                        'We will also prepare you for interviews and help you with how to build a work profile. ' +
+                        'Take a look at our past interns <br>' +
+                        '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+                }
+                return botui.message.add({
+                    type: 'html',
+                    delay: 1000,
+                    loading: true,
+                    content: message
+                });
+            }).then(function(res) {
+                return botui.action.button({
+                    action: [{
+                        delay: 3000,
+                        loading: true,
+                        text: 'This is has been very enlightening, thank you!',
+                        value: 'cool'
+                    }]
+                });
+            }).then(function(index) {
+                return botui.message.add({
+                    delay: 2000,
+                    loading: true,
+                    content: 'You are welcome'
+                });
+            }).then(function(index) {
+                return botui.action.button({
+                    action: [{
+                        delay: 1000,
+                        loading: true,
+                        text: 'Goodbye',
+                        value: 'bye'
+                    }]
+                });
+            }).then(function(index) {
+                return botui.message.add({
+                    delay: 1000,
+                    loading: true,
+                    content: 'Bye, hope to see you again.'
+                });
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>

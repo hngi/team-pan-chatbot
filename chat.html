@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PanChat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./build/botui.min.css" />
+    <link rel="stylesheet" href="./build/botui-theme-default.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            background-color: #41c0cc;
+            background-image: linear-gradient(-90deg, #41c0cc, #41cca5);
+        }
+        
+        .botui-container {
+            background-color: inherit;
+        }
+        
+        .botui-actions-container {
+            padding: 0px 30px;
+        }
+        
+        .botui-message-content.text {
+            background-color: #e1fafc;
+            color: #404040;
+        }
+        
+        .botui-message-content.human {
+            background-color: #f7ff61;
+            color: #404040;
+        }
+        
+        button.botui-actions-buttons-button {
+            margin-top: 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-2">
+        <a class="navbar-brand" href="#">
+            <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/Group_lv8bea.png" alt="Logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <ul class="navbar-nav mr-5">
+
+                <li class="nav-item mr-5">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mr-5">
+                    <a class="nav-link" href="https://www.termsfeed.com/terms-service/63c7e2d102f8f89a4dc18f44ce826b03">Terms of Use</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div id="pan-bot-ui" class="col-md-8 offset-md-2">
+        <bot-ui></bot-ui>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+    <script src="./build/botui.min.js"></script>
+
+    <script src="js.js">
+      //Initial javascript code for the chatbot..
+
+
+      //   var botui = new BotUI('pan-bot-ui');
+      //   botui.message.add({
+      //       delay: 1000,
+      //       loading: true,
+      //       content: 'Hello, My name is Pan. I will be your user friendly bot for today!'
+      //   }).then(function() {
+      //       botui.message.add({ // show a message
+      //           delay: 1000,
+      //           loading: true,
+      //           content: 'Whats your name?'
+      //       }).then(function() { // wait till its shown
+      //           return botui.action.text({ // show 'text' action
+      //               action: {
+      //                   placeholder: 'Your name'
+      //               }
+      //           });
+      //       }).then(function(res) { // get the result
+      //           botui.message.add({
+      //               content: 'Hello ' + res.value + ', ' +
+      //                   'How can I help you today?'
+      //           });
+      //       }).then(function() {
+      //           return botui.action.button({
+      //               delay: 1000,
+      //               loading: true,
+      //               action: [{
+      //                   text: 'What is HNG?',
+      //                   value: 'hng'
+      //               }, {
+      //                   text: 'I am a newbie and have no experience, is the programme for me?',
+      //                   value: 'newbie'
+      //               }, {
+      //                   text: 'How do I join HNG?',
+      //                   value: 'join'
+      //               }, {
+      //                   text: 'Is the Internship free?',
+      //                   value: 'free'
+      //               }, {
+      //                   text: 'Will the internship pay the interns or support me?',
+      //                   value: 'support'
+      //               }, {
+      //                   text: 'What do I need to get started?',
+      //                   value: 'need'
+      //               }, {
+      //                   text: 'What programmes will I learn or do in the internship?',
+      //                   value: 'programmes'
+      //               }, {
+      //                   text: 'Will I get a job from the internship?',
+      //                   value: 'job'
+      //               }]
+      //           });
+      //       }).then(function(res) {
+      //           var message;
+
+      //           if (res.value === "hng") {
+      //               message =
+      //                   'HNG internship is a 3 months remote internship designed to find and develop the most ' +
+      //                   'talented software developers.';
+      //           } else if (res.value == "newbie") {
+      //               message =
+      //                   'Yes, this programme is for you. There is a pre-internship to prepare the newbies.<br>' +
+      //                   ' If you are dedicated, you will be able to do well.' +
+      //                   ' To know more visit <a href="https://hng.tech/about">HNG</a>';
+      //           } else if (res.value === "join") {
+      //               message =
+      //                   'Follow the link and join. its an easy process. ' +
+      //                   '<a href="https://hng.tech/become-intern">Join</a>';
+      //           } else if (res.value === "free") {
+      //               message =
+      //                   'Yes, The HNG internship is completely free.';
+      //           } else if (res.value === "support") {
+      //               message =
+      //                   'In the past, we have paid interns a monthly stipends, but because of the large number of ' +
+      //                   'interns we take in yearly, we do not pay the interns except in some circumstance.';
+      //           } else if (res.value === "need") {
+      //               message =
+      //                   'You will need the following to do this internship successfully:' +
+      //                   '<br> A Laptop <br>' +
+      //                   'Internet<br>Time<br>Electricity.';
+      //           } else if (res.value === "programmes") {
+      //               message =
+      //                   'You will have the opportunity to learn ' +
+      //                   '<br> Design <br> Frontend Development <br>' +
+      //                   'Backend Development <br> Machine Learning' +
+      //                   '<br>Digital Marketing <br>Android Development' +
+      //                   '<br> Sale Engineering';
+      //           } else if (res.value === "job") {
+      //               message =
+      //                   'Yes, if you complete the internship successfully, there will be job oppurtunities. ' +
+      //                   'We will also prepare you for interviews and help you with how to build a work profile. ' +
+      //                   'Take a look at our past interns <br>' +
+      //                   '<a href="https://hng.tech/interns">HNG INTERNS</a>';
+      //           }
+      //           return botui.message.add({
+      //               type: 'html',
+      //               delay: 1000,
+      //               loading: true,
+      //               content: message
+      //           });
+      //       }).then(function(res) {
+      //           return botui.action.button({
+      //               action: [{
+      //                   delay: 3000,
+      //                   loading: true,
+      //                   text: 'This is has been very enlightening, thank you!',
+      //                   value: 'cool'
+      //               }]
+      //           });
+      //       }).then(function(index) {
+      //           return botui.message.add({
+      //               delay: 2000,
+      //               loading: true,
+      //               content: 'You are welcome'
+      //           });
+      //       }).then(function(index) {
+      //           return botui.action.button({
+      //               action: [{
+      //                   delay: 1000,
+      //                   loading: true,
+      //                   text: 'Goodbye',
+      //                   value: 'bye'
+      //               }]
+      //           });
+      //       }).then(function(index) {
+      //           return botui.message.add({
+      //               delay: 1000,
+      //               loading: true,
+      //               content: 'Bye, hope to see you again.'
+      //           });
+      //       });
+
+      //   });
+    </script>
+
+</body>
+
+</html>

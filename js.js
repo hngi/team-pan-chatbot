@@ -522,7 +522,7 @@ var botui = new BotUI('pan-bot-ui');
                    delay: 1000,
                    loading: true,
                    action: [{
-                       text: "No! I don't have any more questions?",
+                       text: "No! I don't have any more questions",
                        value: 'noquestion'
                    }, {
                        text: 'Yes! I have more questions',
@@ -544,7 +544,7 @@ var botui = new BotUI('pan-bot-ui');
                } else if (res.value === "question") {
                    message =
                        'For more questions, please visit the faq section of HNG Internship ' +
-                       '<a href="https://slack-redir.net/link?url=https%3A%2F%2Fsites.google.com%2Fhotels.ng%2Finternship%2Ffaq-frequently-asked-questions">here</a>';
+                       '<a href="https://slack-redir.net/link?url=https%3A%2F%2Fsites.google.com%2Fhotels.ng%2Finternship%2Ffaq-frequently-asked-questions">HERE</a>';
                }
                return botui.message.add({
                    type: 'html',
@@ -557,7 +557,7 @@ var botui = new BotUI('pan-bot-ui');
                     action: [{
                         delay: 3000,
                         loading: true,
-                        text: 'This is has been very enlightening, thank you!',
+                        text: 'This has been very enlightening, thank you!',
                         value: 'cool'
                     }]
                 });

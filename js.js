@@ -522,10 +522,10 @@ var botui = new BotUI('pan-bot-ui');
                    delay: 1000,
                    loading: true,
                    action: [{
-                       text: "No! I don't have any more questions?",
+                       text: "No! I don't have any more questions",
                        value: 'noquestion'
                    }, {
-                       text: 'Yes! I have more questions?',
+                       text: 'Yes! I have more questions',
                        value: 'question'
                    }]
                });
@@ -543,8 +543,8 @@ var botui = new BotUI('pan-bot-ui');
                        'I wish you all the best as you start the life changing journey with HNG!';
                } else if (res.value === "question") {
                    message =
-                       'For more questions, please visit the faq section of HNG Internship' +
-                       '<a href="https://slack-redir.net/link?url=https%3A%2F%2Fsites.google.com%2Fhotels.ng%2Finternship%2Ffaq-frequently-asked-questions">here</a>';
+                       'For more questions, please visit the faq section of HNG Internship ' +
+                       '<a href="https://slack-redir.net/link?url=https%3A%2F%2Fsites.google.com%2Fhotels.ng%2Finternship%2Ffaq-frequently-asked-questions">HERE</a>';
                }
                return botui.message.add({
                    type: 'html',
@@ -557,7 +557,7 @@ var botui = new BotUI('pan-bot-ui');
                     action: [{
                         delay: 3000,
                         loading: true,
-                        text: 'This is has been very enlightening, thank you!',
+                        text: 'This has been very enlightening, thank you!',
                         value: 'cool'
                     }]
                 });

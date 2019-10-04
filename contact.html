@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Contact Support</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
     <style>
@@ -33,6 +34,15 @@ body{
     box-align: left;
     width: 100%;
 }
+.age{
+    border-top: none;
+    padding:30px;
+    border-left: none;
+    border-right: none;
+    margin: 10px;
+    box-align: left;
+    width: 100%;
+}
 #Age{
     border-top: none;
     border-left: none;
@@ -40,6 +50,7 @@ body{
     margin: 10px;
     box-align: left;
     width: 100%;
+    padding: 11px
 }
 .btn{
         position: absolute;
@@ -48,6 +59,7 @@ body{
     width: 225px;
     height: 48px;
     color: black;
+    background-color: #41cca5;
        }
        .Btn{
         position: absolute;
@@ -56,6 +68,7 @@ body{
     width: 225px;
     height: 48px;
     color: black;
+    background-color: #41cca5;
        }
 
     </style>
@@ -69,21 +82,26 @@ body{
                     
             </h1>
     </div>
+    <form action = "contact.php" method = "POST">
     <div>
                     <label id="Number-label"></label>
-                    <input id="name"required type="text" min="1" max="120" placeholder ="Your e-mail">
+                    <input id="name"required type="text" min="1" max="120" placeholder ="Your e-mail" required>
                    </div>
                    <div>
                     <label id="Number-label"></label>
-                    <input id="Age"required type="text" min="1" max="120" placeholder ="Please provide a title for your message here">
+                    <input id="Age"required type="text"  placeholder ="Please provide a title for your message here" required>
                    </div>
                    <div>
                     <label id="Number-label"></label>
-                    <input id="Age"required type="text" placeholder ="Enter your message here">
+                    <input class="age"required type="text" placeholder ="Enter your message here" required>
                     </div>
                     <div>
-                            <button type="button" class="btn">SUBMIT</button> </br>
+                        <input type="submit" class="btn" value="SEND REQUEST">
                            <a href="index.html"> <button type="button" class="Btn">BACK TO HOME</button></a>
                     </div>
+                    </form>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

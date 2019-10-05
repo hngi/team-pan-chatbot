@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.scss">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <title>Pan Chat</title>
     <style>
@@ -15,10 +16,10 @@
             background-color: rgb(229, 229, 229);
         }
         
-        nav.navbar {
+        /*nav.navbar {
             background-color: #1F2021 !important;
             font-weight: 300;
-        }
+        }*/
         
         .navbar-nav>li>a.active {
             color: #6FCF97 !important;
@@ -51,10 +52,12 @@
             background-color: #06C695;
             border-color: #06C695;
         }
+}
+
     </style>
 </head>
 
-<body>
+<body id="body" class="dark-mode">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-2">
         <a class="navbar-brand" href="#">
             <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/Group_lv8bea.png" alt="Logo" class="img-fluid">
@@ -85,11 +88,13 @@
                 <li class="nav-item mr-5">
                    <a class="nav-link btn btn-outline-success" href="chat.html">Chat with Pan</a>
                 </li>
+                <li class="nav-item mr-5"><button type="button" class="btn btn-dark" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">Switch Theme</button>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container-fluid" style="background-color: #e5e5e5">
+    
         <div class="row">
             <div class="col-md-6 left-side pt-5">
                 <div class="col-md-6 mt-5 pt-5">
@@ -103,11 +108,12 @@
                 <img src="https://res.cloudinary.com/sgnolebagabriel/image/upload/v1569400532/panchat/ladytoon-office_uo89nc.png" class="img-fluid" alt="home-image">
             </div>
         </div>
-    </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="theme.js"></script>
 </body>
 
 </html>

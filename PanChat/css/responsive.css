@@ -1,0 +1,183 @@
+@media only screen and (max-width: 1199px)
+{
+	.navigation
+	{
+		margin-left: 60px;
+	}
+	.navigation ul li:not(:last-child)
+	{
+		margin-right: 40px;
+	}
+
+	.message-content img {
+	height: 60px;
+	width: 60px;
+	}
+	.bot-message {
+		width: 50%;
+	}
+	.bot-message span {
+		width: 470px;
+		float: right;
+		margin-left: 60px;
+	}
+	.user-message {
+		margin-right: 10px;
+		margin-bottom: 20px;
+	}
+	.user-message b {
+	padding: 15px 15px 15px;
+	border: 1px solid #b2beb5;
+	width: 430px;
+	background: #b2beb5;
+	color: #000000;
+	border-radius: 3px;
+	}
+	.send-message {
+	margin-top: 55px;
+	height: 110px;
+	}
+	.message-area {
+	padding-top: 20px;
+	}
+	input[type="text"] {
+	padding: 12px 15px;
+	margin: 0 0 10px 0;
+	width: 800px;
+	}
+	.send {
+	padding: 12px 15px;
+	margin: 0 0 10px 0;
+	}
+}
+
+@media only screen and (max-width: 991px)
+{
+	.header_content
+	{
+		height: 80px;
+	}
+	.navigation
+	{
+		display: none;
+	}
+	.download
+	{
+		display: none;
+	}
+	.hamburger
+	{
+		display: block;
+	}
+	.message-content img {
+	height: 40px;
+	width: 40px;
+	}
+	.bot-message {
+		width: 100%;
+	}
+
+	.user-message {
+		margin-right: 10px;
+		margin-bottom: 20px;
+	}
+	.user-message b {
+	padding: 8px 8px 8px;
+	border: 1px solid #b2beb5;
+	width: 400px;
+	background: #b2beb5;
+	color: #000000;
+	border-radius: 3px;
+	}
+	input[type="text"] {
+	width: 450px;
+	}
+
+}
+
+@media only screen and (max-width: 575px)
+{
+	.logo
+	{
+		width: 70px;
+	}
+	.header_content
+	{
+		height: 60px;
+	}
+	.menu_close_container
+	{
+		top: 28px;
+		right: 28px;
+	}
+	.menu_item a
+	{
+		font-size: 18px;
+	}
+	.download_mobile
+	{
+		font-size: 11px;
+	}
+	.button
+	{
+		width: 153px;
+		height: 52px;
+	}
+	.button a
+	{
+		font-size: 12px;
+		line-height: 52px;
+	}
+	.message-content {
+		margin-top: 80px;
+	}
+	.message-content img {
+	height: 20px;
+	width: 20px;
+	}
+
+	.bot-message {
+	width: 60%;
+	}
+	.bot-message span {
+		width: 300px;
+		margin-left: 100px;
+		margin-bottom: 30px;
+	}
+
+	.user-message {
+		margin-right: 5px;
+		margin-bottom: 30px;
+	}
+	.user-message b {
+	padding: 8px 8px 8px;
+	border: 1px solid #b2beb5;
+	width: 400px;
+	background: #b2beb5;
+	color: #000000;
+	border-radius: 3px;
+	}
+	p{
+		font-size: 13px;
+		font-weight: bold;
+	}
+	b{
+		font-size: 13px;
+	}
+	input[type="text"] {
+	width: 380px;
+	}
+
+}
+
+
+@media only screen and (max-width: 500px)
+{
+	.bot-message {
+		width: 80%;
+	}
+	input[type="text"] {
+	width: 350px;
+	}
+	
+}

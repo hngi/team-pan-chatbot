@@ -1,0 +1,10 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.right-side {
+    padding-top: 25vh;
+}
